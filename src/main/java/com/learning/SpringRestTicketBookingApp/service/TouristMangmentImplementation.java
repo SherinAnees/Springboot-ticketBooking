@@ -67,5 +67,16 @@ public class TouristMangmentImplementation implements ITouristManagment{
         }
     }
 
+    @Override
+    public String deleteTouristById(Integer id) {
+      Optional<Tourist> tourist=  repo.findById(id);
+      if(tourist.isPresent()){
+          repo.deleteById(id);
+          return "Tourist with "+ id+"Deleted";
+      }
+      else
+          return "Tourist Not found";
+    }
+
 
 }

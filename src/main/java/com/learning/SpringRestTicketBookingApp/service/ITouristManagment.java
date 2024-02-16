@@ -11,5 +11,6 @@ public interface ITouristManagment {
     public Tourist fetchTouristById(Integer id);
     public String updateTheTouristAllDetails(Tourist tourist);
     public String updateTouristById(Integer id,Double budgetHike);
+    public String deleteTouristById(Integer id);
 }
 
